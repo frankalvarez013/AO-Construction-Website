@@ -12,6 +12,14 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        hero_img: "url('../public/displayImg.png')",
+      },
+      colors: {
+        'light-grey1': '#4E5358',
+        'dark-grey1': '#2A2A2A',
+      },
+      spacing: {
+        comp1: '46rem',
       },
     },
   },
