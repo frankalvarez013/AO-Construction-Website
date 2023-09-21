@@ -1,14 +1,14 @@
 const Footer = () => {
   return (
-    <footer className="h-auto md:h-56 md:p-14 bg-dark-grey1 text-slate-100">
-      <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+    <footer className="md:p-14 bg-dark-grey1 text-slate-100">
+      <div className="flex flex-col md:flex-row justify-center">
         <div className="text-center md:text-left">
           <div>AO Construction</div>
           <div>symbol email</div>
           <div>symbol phone</div>
         </div>
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-          <div className="text-center md:text-left md:ml-16">
+        <div className="flex flex-col md:flex-row">
+          <div className="text-center md:text-left">
             Services
             <div>
               <h4> ? </h4>

@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 const rubik = Rubik({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -22,12 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={rubik.className}>
         <div className="flex flex-col h-full">
-          <div className="flex-initial">
+          <div className="">
             <Header></Header>
           </div>
-          <div className="flex-auto">{children}</div>
-
-          <Footer></Footer>
+          <div className="grow">{children}</div>
+          <div className="">
+            <Footer></Footer>
+          </div>
         </div>
       </body>
     </html>

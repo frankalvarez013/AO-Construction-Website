@@ -11,11 +11,11 @@ const Header = () => {
   return (
     <header className={poppins.className}>
       <nav className="flex items-center justify-between py-1.5 font-semibold">
-        <div className="flex items-center flex-shrink-0 ml-5 text-lg gap-3">
+        <div className="flex items-center flex-shrink-0 pl-5 text-lg gap-3">
           <Image src={Brand} alt="/" className="h-14 w-14"></Image>
           <span>AO Construction</span>
         </div>
-        <div className="hidden items-center space-x-4 lg:flex mr-10 gap-x-2 text-sm">
+        <div className="hidden items-center space-x-4 lg:flex pr-10 gap-x-2 text-sm">
           <div className="flex-nowrap ">
             <a>Project</a>
           </div>
@@ -40,7 +40,7 @@ const Header = () => {
             <a>Home</a>
           </div>
         </div>
-        <div className="lg:hidden mr-7 ">
+        <div className="lg:hidden pr-7 ">
           <Image src={HamburgerSymbol} className="h-7 w-7" alt="" />
         </div>
       </nav>
