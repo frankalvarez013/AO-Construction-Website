@@ -16,6 +16,9 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         hero_img: "url('../public/displayImg.png')",
+        build_img: "url('../public/building.svg')",
+        repair_img: "url('../public/repair.svg')",
+        design_img: "url('../public/design.svg')",
       },
       colors: {
         'light-grey1': '#4E5358',
