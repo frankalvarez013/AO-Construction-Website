@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className={poppins.className}>
       <nav className="flex items-center justify-between py-1.5 font-semibold">
-        <div className="flex items-center flex-shrink-0 pl-5 text-lg gap-3">
+        <div className="flex items-center pl-5 text-lg gap-3">
           <Image src={Brand} alt="/" className="h-14 w-14"></Image>
           <span>AO Construction</span>
         </div>
@@ -40,7 +40,7 @@ const Header = () => {
             <a>Home</a>
           </div>
         </div>
-        <div className="lg:hidden pr-7 ">
+        <div className="lg:hidden pr-7 flex-shrink-0">
           <Image src={HamburgerSymbol} className="h-7 w-7" alt="" />
         </div>
       </nav>

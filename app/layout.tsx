@@ -25,7 +25,7 @@ export default function RootLayout({
           <div className="">
             <Header></Header>
           </div>
-          <div className="grow">{children}</div>
+          <div className="h-auto">{children}</div>
           <div className="">
             <Footer></Footer>
           </div>

@@ -7,6 +7,9 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      lil: '470px',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -30,8 +33,34 @@ const config: Config = {
         content: '46rem',
         imgS: '20%',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            '.responsive-text': {
+              fontSize: 'calc(1rem + 1vw)',
+              lineHeight: '1',
+            },
+            'h2, .h2': {
+              fontSize: '1.325rem',
+              lineHeight: '1',
+            },
+            'h3, .h3': {
+              fontSize: '1.3rem',
+              lineHeight: '1',
+            },
+            'h4, .h4': {
+              fontSize: '1.275rem',
+              lineHeight: '1',
+            },
+            'h5, .h5': {
+              fontSize: '1rem',
+              // Optionally, specify line-height as well
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
 export default config
