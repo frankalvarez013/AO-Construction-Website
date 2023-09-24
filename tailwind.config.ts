@@ -15,10 +15,11 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        hero_img: "url('../public/displayImg.png')",
-        build_img: "url('../public/building.svg')",
-        repair_img: "url('../public/repair.svg')",
-        design_img: "url('../public/design.svg')",
+        hero_img: "url('/displayImg.png')",
+        build_img: "url('/building.svg')",
+        repair_img: "url('/repair.svg')",
+        design_img: "url('/design.svg')",
+        static_img: "url('/staticProjectImg.svg')",
       },
       colors: {
         'light-grey1': '#4E5358',
