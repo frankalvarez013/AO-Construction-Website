@@ -10,6 +10,9 @@ const config: Config = {
     screens: {
       lil: '470px',
     },
+    minHeight: {
+      auto: 'auto',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
