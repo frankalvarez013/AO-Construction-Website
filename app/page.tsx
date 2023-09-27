@@ -7,6 +7,9 @@ import design from '../public/design.svg'
 import HookSection from '@/components/HookSection'
 import Trust from '@/components/Trust'
 import RelatedProjects from '@/components/RelatedProjects'
+import FAQ from '@/components/FAQ'
+import LocationSection from '@/components/LocationSection'
+import ContactUs from '@/components/ContactUs'
 export default function Home() {
   return (
     <div className="h-full w-full flex flex-col">
@@ -71,6 +74,9 @@ export default function Home() {
       <HookSection></HookSection>
       <Trust></Trust>
       <RelatedProjects></RelatedProjects>
+      <FAQ></FAQ>
+      <LocationSection></LocationSection>
+      <ContactUs></ContactUs>
     </div>
   )
 }

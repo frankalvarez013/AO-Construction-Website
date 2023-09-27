@@ -7,9 +7,9 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    screens: {
-      lil: '470px',
-    },
+    // screens: {
+    //   lil: '470px',
+    // },
     minHeight: {
       auto: 'auto',
     },
@@ -27,6 +27,7 @@ const config: Config = {
       colors: {
         'light-grey1': '#4E5358',
         'dark-grey1': '#2A2A2A',
+        'light-grey2': '#F7F7F7',
         orangeJ: '#ffb400',
       },
       spacing: {
