@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="h-full w-full flex flex-col">
       <main className="h-full w-full max-h-full">
-        <section className="relative">
+        <section className="relative lg:py-20">
           <Image
             src={displayImg}
             alt=""
@@ -24,7 +24,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-light-grey1 opacity-80"></div>
 
           <div className="flex justify-center items-start p-20">
-            <div className="flex flex-col relative text-white gap-24 mb-16">
+            <div className="flex flex-col relative text-white gap-24 mb-16 lg:flex-row">
               <div className="flex flex-col items-start gap-8">
                 <h1 className="font-bold border-orangeJ border-l-8 text-4xl sm:text-6.5xl pl-5 lil:text-5xl">
                   Our Construction <br /> Services
