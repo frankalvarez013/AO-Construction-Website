@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="h-full w-full flex flex-col">
       <main className="h-full w-full max-h-full">
-        <section className="relative lg:py-20">
+        <section className="relative lg:py-20" id="home">
           <Image
             src={displayImg}
             alt=""
@@ -33,7 +33,7 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                   quis egestas pellentesque libero dolor in diam consequat ut.{' '}
                 </p>
-                <button className="px-11 py-3 ml-1 bg-orangeJ text-sm font-semibold">
+                <button className="px-11 py-3 ml-1 bg-orangeJ text-sm font-semibold hover:text-black">
                   Get a Free Quote
                 </button>
               </div>

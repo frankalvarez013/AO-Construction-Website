@@ -35,7 +35,7 @@ const HookSection = () => {
             leo consectetur accumsan. Vivamus viverra ante turpis, dignissim
             condimentum elit egestas sit amet. Phasellus faucibus pellentesque
           </div>
-          <button className="px-10 py-2 bg-orangeJ text-white text-sm">
+          <button className="px-10 py-2 bg-orangeJ text-white text-sm hover:text-black">
             Learn More ->
           </button>
         </div>

@@ -2,7 +2,10 @@ import Image from 'next/image'
 import vidImg from '../public/vidTemp.svg'
 const Trust = () => {
   return (
-    <section className="max-h-full bg-dark-grey1 text-white flex flex-col ">
+    <section
+      id="about"
+      className="max-h-full bg-dark-grey1 text-white flex flex-col "
+    >
       <div className="flex flex-col gap-10 w-full justify-center items-center py-16 px-10">
         <div className="flex flex-col justify-center">
           <Image alt="" src={vidImg} className=""></Image>
