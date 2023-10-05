@@ -1,20 +1,23 @@
-import Image from 'next/image'
-import vidImg from '../public/vidTemp.svg'
 const Trust = () => {
   return (
     <section
       id="about"
-      className="max-h-full bg-dark-grey1 text-white flex flex-col "
+      className="max-h-full bg-dark-grey1 text-white flex flex-col"
     >
       <div className="flex flex-col gap-10 w-full justify-center items-center py-16 px-10">
         <div className="flex flex-col justify-center">
-          <Image alt="" src={vidImg} className=""></Image>
+          {/* Add the video element with controls */}
+          <video controls width="400" height="300">
+            {/* Specify the video source */}
+            <source src={'/buildingVid.mp4'} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="flex text-black">
             <h3 className="bg-orangeJ flex-grow p-3 font-semibold">
               Call for a Quote <br /> (346) 234 - 6973
             </h3>
             <div className="flex flex-grow justify-center items-center bg-white px-3">
-              <button className="  border-black border-4 px-3 py-1 font-semibold ">
+              <button className="border-black border-4 px-3 py-1 font-semibold hover:text-orangeJ hover:border-orangeJ">
                 ONLINE ESTIMATE FORM
               </button>
             </div>
@@ -30,7 +33,7 @@ const Trust = () => {
             quam sed mauris proin feugiat. Scelerisque lorem posuere iaculis
             nunc amet phasellus.
           </p>
-          <button className="border-orangeJ border-2 px-12 py-2 text-orangeJ font-normal">
+          <button className="border-orangeJ border-2 px-12 py-2 text-orangeJ font-normal hover:bg-orangeJ hover:text-black">
             About Us
           </button>
         </div>

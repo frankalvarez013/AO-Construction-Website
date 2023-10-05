@@ -9,11 +9,16 @@ const Question = () => {
   }
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex justify-between">
+      <div
+        className="flex justify-between hover:cursor-pointer"
+        onClick={toggleVisibility}
+      >
         <h3 className="font-semibold text-xl">Question?</h3>
-        <button className="" onClick={toggleVisibility}>
-          +
-        </button>
+        {isHidden ? (
+          <button className="">+</button>
+        ) : (
+          <button className="">-</button>
+        )}
       </div>
       <div>
         {isHidden ? (

@@ -33,3 +33,7 @@
     margin: 0;
   }
 }
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}

@@ -1,5 +1,12 @@
 'use client'
+
+import { useState } from 'react'
+
 const ContactUs = () => {
+  const [submitt, onSubmitt] = useState(false)
+  function bro() {
+    onSubmitt(true)
+  }
   async function handleSubmit(event) {
     event.preventDefault()
     const formData = new FormData(event.target)
@@ -16,6 +23,7 @@ const ContactUs = () => {
       body: JSON.stringify(object),
     })
     const result = await response.json()
+    onSubmitt(true)
     if (result.success) {
       console.log(result)
     }
@@ -61,6 +69,19 @@ const ContactUs = () => {
                 className="px-5 py-1 border-white border-4 hover:bg-white"
               />
             </div>
+            {submitt ? (
+              <p className="font-normal text-light-grey1">
+                Your message has been successfully received. We appreciate your
+                interest in AO Construction. Our team is reviewing your inquiry,
+                and we will get back to you as soon as possible.
+              </p>
+            ) : (
+              <p className="font-normal text-light-grey1 hidden">
+                Your message has been successfully received. We appreciate your
+                interest in AO Construction. Our team is reviewing your inquiry,
+                and we will get back to you as soon as possible.
+              </p>
+            )}
           </form>
         </div>
       </div>
