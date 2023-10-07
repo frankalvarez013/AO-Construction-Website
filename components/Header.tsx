@@ -1,81 +1,122 @@
 'use client'
 import Image from 'next/image'
 import Brand from '../public/AOSymbol.svg'
-import HamburgerSymbol from '../public/hamburger.svg'
+import HamburgerSymbol from '../public/block.svg'
 import XSymbol from '../public/x.svg'
 import { Poppins } from 'next/font/google'
+import { useState } from 'react'
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '600'],
 })
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
+  const handleGlobalClick = () => {
+    setIsOpen(false)
+  }
   return (
     <header className={poppins.className}>
-      <nav className="flex items-center justify-between py-1.5 font-semibold fixed z-10 bg-white w-full">
+      <nav className="flex items-center justify-between pt-1.5 font-semibold fixed z-10 bg-white w-full">
         <div className="flex items-center pl-5 text-lg gap-3">
           <Image src={Brand} alt="/" className="h-14 w-14"></Image>
           <span>AO Construction</span>
         </div>
-        <div className="hidden items-center space-x-4 lg:flex pr-10 gap-x-2 text-sm">
-          <div className="flex-nowrap ">
+
+        <ul
+          className={`fixed flex -top-full gap-0 flex-col bg-white w-full text-center lg:static lg:flex-row lg:w-auto lg:top-auto lg:items-center lg:space-x-4 lg:pr-10 lg:gap-x-2 text-sm ${
+            isOpen ? 'top-0 h-screen justify-evenly items-center' : ''
+          }`}
+        >
+          <li className=" flex-nowrap">
             <button
               onClick={() => {
+                handleGlobalClick()
                 document
                   .getElementById('home')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }}
+              className="nav-link hover:underline decoration-2"
             >
               Home
             </button>
-          </div>
-          <div className="whitespace-nowrap">
+          </li>
+          <li className=" whitespace-nowrap">
             <button
               onClick={() => {
+                handleGlobalClick()
                 document
                   .getElementById('about')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }}
+              className="nav-link hover:underline decoration-2"
             >
               About Us
             </button>
-          </div>
-          <div className="flex-nowrap">
+          </li>
+          <li className=" flex-nowrap">
             <button
               onClick={() => {
+                handleGlobalClick()
                 document
                   .getElementById('projects')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }}
+              className="nav-link hover:underline decoration-2"
             >
               Projects
             </button>
-          </div>
-          <div className="flex-nowrap">
+          </li>
+          <li className="flex-nowrap">
             <button
               onClick={() => {
+                handleGlobalClick()
                 document
                   .getElementById('services')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }}
+              className="nav-link hover:underline decoration-2"
             >
               Services
             </button>
-          </div>
-          <div className="whitespace-nowrap">
+          </li>
+          <li className="whitespace-nowrap">
             <button
               onClick={() => {
+                handleGlobalClick()
                 document
                   .getElementById('contact')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }}
+              className="nav-link hover:underline decoration-2"
             >
               Contact
             </button>
-          </div>
-        </div>
-        <div className="lg:hidden pr-7 flex-shrink-0">
-          <Image src={HamburgerSymbol} className="h-7 w-7" alt="" />
-        </div>
+          </li>
+        </ul>
+        <button
+          onClick={handleClick}
+          className="flex flex-col justify-center items-center lg:hidden pr-7 flex-shrink-0 p-2"
+        >
+          <span
+            className={`bg-black block transition-all duration-300 ease-out h-[2px] w-6 rounded-sm ${
+              isOpen ? 'rotate-45' : '-translate-y-1'
+            }`}
+          ></span>
+          <span
+            className={`bg-black block transition-all duration-300 ease-out h-[2px] w-6 rounded-sm ${
+              isOpen ? 'opacity-0' : 'opacity-100'
+            }`}
+          ></span>
+          <span
+            className={`bg-black block transition-all duration-300 ease-out h-[2px] w-6 rounded-sm ${
+              isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'
+            }`}
+          ></span>
+        </button>
       </nav>
     </header>
   )

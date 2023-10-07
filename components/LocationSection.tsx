@@ -7,9 +7,9 @@ const LocationSection = () => {
     <section className="h-full w-full p-10">
       <div className="flex flex-col gap-16">
         <div className="flex items-center justify-center">
-          <Image alt="" src={Map} className="w-1/2"></Image>
+          <Image alt="" src={Map} className="md:w-1/2"></Image>
         </div>
-        <div className="flex ">
+        <div className="flex flex-col sm:flex-row gap-14">
           <div className="basis-1/2 flex justify-center items-center">
             <div className="w-4/5 p-5 shadow-2xl">
               <div className="font-light mb-3">Company Address</div>
@@ -29,7 +29,7 @@ const LocationSection = () => {
                 </div>
               </div>
             </div>
-            <div className="flex w-3/5 justify-start items-cebter gap-7">
+            <div className="flex w-3/5 justify-start items-center gap-7">
               <Image src={Phone} alt=""></Image>
               <div className=" flex flex-col gap-3">
                 <h4 className="font-normal text-sm">Phones</h4>

@@ -10,10 +10,10 @@ const HookSection = () => {
             <Image
               src={constructionBuilding}
               alt=""
-              className="p-2 bg-white drop-shadow-2xl absolute -top-10"
+              className="p-2 bg-white drop-shadow-2xl md:absolute md:-top-10"
             ></Image>
           </div>
-          <div className="relative w-48 h-52">
+          <div className="hidden sm:block relative w-48 h-52">
             <Image
               src={documentationImg}
               alt=""

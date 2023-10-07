@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={rubik.className}>
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full w-full">
           <div className="">
             <Header></Header>
           </div>
-          <div className="h-auto flex-grow mt-20">{children}</div>
+          <div className="h-auto flex-grow">{children}</div>
           <div className="">
             <Footer></Footer>
           </div>

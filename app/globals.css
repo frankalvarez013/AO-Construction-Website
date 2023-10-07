@@ -17,6 +17,7 @@
   body {
     height: 100%;
     margin: 0;
+    padding-top: px;
   }
   html {
     box-sizing: border-box;

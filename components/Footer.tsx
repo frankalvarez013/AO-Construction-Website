@@ -15,10 +15,18 @@ const Footer = () => {
             <h4 className="font-semibold text-2xl">+1 634 7638 654</h4>
           </div>
           <div className="flex gap-3 lg:justify-normal justify-center">
-            <Image alt="" src={Twitter}></Image>
-            <Image alt="" src={Facebook}></Image>
-            <Image alt="" src={Linkedin}></Image>
-            <Image alt="" src={Youtube}></Image>
+            <button>
+              <Image alt="" src={Twitter}></Image>
+            </button>
+            <button>
+              <Image alt="" src={Facebook}></Image>
+            </button>
+            <button>
+              <Image alt="" src={Linkedin}></Image>
+            </button>
+            <button>
+              <Image alt="" src={Youtube}></Image>
+            </button>
           </div>
         </div>
         <div className="flex flex-col md:flex-row basis-3/5 items-center md:items-start">

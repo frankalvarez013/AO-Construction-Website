@@ -10,7 +10,7 @@ const Question = () => {
   return (
     <div className="flex flex-col gap-6">
       <div
-        className="flex justify-between hover:cursor-pointer"
+        className="flex justify-between hover:cursor-pointer hover:text-orangeJ"
         onClick={toggleVisibility}
       >
         <h3 className="font-semibold text-xl">Question?</h3>

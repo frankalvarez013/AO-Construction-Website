@@ -4,9 +4,6 @@ import { useState } from 'react'
 
 const ContactUs = () => {
   const [submitt, onSubmitt] = useState(false)
-  function bro() {
-    onSubmitt(true)
-  }
   async function handleSubmit(event) {
     event.preventDefault()
     const formData = new FormData(event.target)
@@ -30,9 +27,9 @@ const ContactUs = () => {
   }
   return (
     <section id="contact" className="h-full bg-orangeJ flex justify-center">
-      <div className="flex flex-col p-20  gap-10 justify-center">
+      <div className="flex flex-col p-20 gap-10 justify-center">
         <div className="font-bold text-3xl">Contact Us</div>
-        <div className="w-full">
+        <div className="">
           <form
             action=""
             className="flex flex-wrap gap-10"
@@ -69,21 +66,21 @@ const ContactUs = () => {
                 className="px-5 py-1 border-white border-4 hover:bg-white"
               />
             </div>
-            {submitt ? (
-              <p className="font-normal text-light-grey1">
-                Your message has been successfully received. We appreciate your
-                interest in AO Construction. Our team is reviewing your inquiry,
-                and we will get back to you as soon as possible.
-              </p>
-            ) : (
-              <p className="font-normal text-light-grey1 hidden">
-                Your message has been successfully received. We appreciate your
-                interest in AO Construction. Our team is reviewing your inquiry,
-                and we will get back to you as soon as possible.
-              </p>
-            )}
           </form>
         </div>
+        {submitt ? (
+          <p className="font-normal text-light-grey1 max-w-[900px]">
+            Your message has been successfully received. We appreciate your
+            interest in AO Construction. Our team is reviewing your inquiry, and
+            we will get back to you as soon as possible.
+          </p>
+        ) : (
+          <p className="font-normal text-light-grey1 hidden">
+            Your message has been successfully received. We appreciate your
+            interest in AO Construction. Our team is reviewing your inquiry, and
+            we will get back to you as soon as possible.
+          </p>
+        )}
       </div>
     </section>
   )
