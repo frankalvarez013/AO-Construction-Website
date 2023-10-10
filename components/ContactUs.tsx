@@ -4,25 +4,40 @@ import { useState } from 'react'
 
 const ContactUs = () => {
   const [submitt, onSubmitt] = useState(false)
+
+  const [formResult, isFormResult] = useState(false)
+
   async function handleSubmit(event) {
     event.preventDefault()
-    const formData = new FormData(event.target)
-    formData.append('access_key', '7b3d8ab8-c5f2-448e-8693-aace83eb4f7f')
+    const nameVal = (document.getElementById('name') as HTMLInputElement)?.value
+    const emailVal = (document.getElementById('email') as HTMLInputElement)
+      ?.value
+    const msg = (document.getElementById('message') as HTMLInputElement)?.value
+    console.log(nameVal, emailVal, msg)
+    if (!nameVal || !emailVal || !msg) {
+      isFormResult(true)
+      console.log('hello?')
+    } else {
+      isFormResult(false)
+      event.preventDefault()
+      const formData = new FormData(event.target)
+      formData.append('access_key', '7b3d8ab8-c5f2-448e-8693-aace83eb4f7f')
 
-    const object = Object.fromEntries(formData)
-    const json = JSON.stringify(object)
+      const object = Object.fromEntries(formData)
+      const json = JSON.stringify(object)
 
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(object),
-    })
-    const result = await response.json()
-    onSubmitt(true)
-    if (result.success) {
-      console.log(result)
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(object),
+      })
+      const result = await response.json()
+      onSubmitt(true)
+      if (result.success) {
+        console.log(result)
+      }
     }
   }
   return (
@@ -59,7 +74,7 @@ const ContactUs = () => {
                 className="w-full p-3"
               />
             </label>
-            <div className="basis-full">
+            <div className={`basis-full ${submitt ? 'hidden' : ''}`}>
               <input
                 type="submit"
                 value="Send Message"
@@ -68,18 +83,22 @@ const ContactUs = () => {
             </div>
           </form>
         </div>
-        {submitt ? (
-          <p className="font-normal text-light-grey1 max-w-[900px]">
-            Your message has been successfully received. We appreciate your
-            interest in AO Construction. Our team is reviewing your inquiry, and
-            we will get back to you as soon as possible.
+        <p
+          className={`font-normal text-light-grey1 max-w-[900px] ${
+            submitt ? '' : 'hidden'
+          } `}
+        >
+          Your message has been successfully received. We appreciate your
+          interest in AO Construction. Our team is reviewing your inquiry, and
+          we will get back to you as soon as possible.
+        </p>
+
+        {formResult ? (
+          <p className="font-normal text-red-500">
+            Please make sure the form has all fields filled out
           </p>
         ) : (
-          <p className="font-normal text-light-grey1 hidden">
-            Your message has been successfully received. We appreciate your
-            interest in AO Construction. Our team is reviewing your inquiry, and
-            we will get back to you as soon as possible.
-          </p>
+          <p></p>
         )}
       </div>
     </section>

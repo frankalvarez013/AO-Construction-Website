@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="h-full w-full flex flex-col overflow-hidden">
       <main className="h-full w-full max-h-full pt-5 -mt-5">
-        <section className="relative pt-20 lg:py-20" id="home">
+        <section className="relative pt-20 lg:py-20 min-h-[700px]" id="home">
           <Image
             src={displayImg}
             alt=""
@@ -23,7 +23,7 @@ export default function Home() {
           ></Image>
           <div className="absolute inset-0 bg-light-grey1 opacity-80"></div>
 
-          <div className="flex justify-center items-start p-20">
+          <div className="flex justify-center items-center lg:py-[100px] p-20">
             <div className="flex flex-col relative text-white gap-14 md:gap-24 mb-16 lg:flex-row">
               <div className="flex flex-col items-start gap-8">
                 <h1 className="font-bold border-orangeJ border-l-8 text-4xl sm:text-6.5xl pl-5 lil:text-5xl">

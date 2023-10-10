@@ -3,17 +3,17 @@ import documentationImg from '../public/documentationImg.svg'
 import Image from 'next/image'
 const HookSection = () => {
   return (
-    <section className="h-auto flex justify-center py-16">
-      <div className="flex flex-col justify-center items-center gap-20 w-3/4">
+    <section className="h-auto flex justify-center py-16 lg:min-h-[730px]">
+      <div className="flex flex-col justify-center items-center gap-20 w-3/4 lg:flex-row-reverse">
         <div className="flex">
-          <div className="relative w-44 h-52">
+          <div className="relative w-44 h-52 lg:w-[400px] lg:static lg:h-full">
             <Image
               src={constructionBuilding}
               alt=""
-              className="p-2 bg-white drop-shadow-2xl md:absolute md:-top-10"
+              className="p-2 bg-white drop-shadow-2xl md:absolute md:-top-10 lg:static lg:-top-0 lg:w-full"
             ></Image>
           </div>
-          <div className="hidden sm:block relative w-48 h-52">
+          <div className="hidden sm:block relative w-48 h-52 lg:hidden">
             <Image
               src={documentationImg}
               alt=""

@@ -1,19 +1,22 @@
 const Trust = () => {
   return (
     <section id="about" className="pt-12 -mt-12">
-      <div className="max-h-full bg-dark-grey1 text-white flex flex-col ">
+      <div className="max-h-full bg-dark-grey1 text-white flex flex-col lg:flex-col-reverse">
         {' '}
-        <div className="flex flex-col gap-10 w-full justify-center items-center py-16 px-10">
-          <div className="flex flex-col justify-center">
+        <div className="flex flex-col gap-10 w-full justify-center items-center py-16 px-10 lg:flex-row-reverse lg:p-0 lg:items-start">
+          <div className="flex flex-col justify-center lg:basis-4/5">
             {/* Add the video element with controls */}
-            <video controls width="400" height="300">
+            <video controls className="w-full lg:h-[600px] object-cover">
               {/* Specify the video source */}
               <source src={'/buildingVid.mp4'} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="flex text-black">
-              <h3 className="bg-orangeJ flex-grow p-3 font-semibold">
-                Call for a Quote <br /> (346) 234 - 6973
+              <h3 className="bg-orangeJ flex-grow p-3 font-semibold lg:py-5">
+                <strong className=" font-bold text-3xl">
+                  Call for a Quote
+                </strong>{' '}
+                <br /> (346) 234 - 6973
               </h3>
               <div className="flex flex-grow justify-center items-center bg-white px-3">
                 <button className="border-black border-4 px-3 py-1 font-semibold hover:text-orangeJ hover:border-orangeJ">
@@ -22,7 +25,7 @@ const Trust = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5 items-start">
+          <div className="flex flex-col gap-5 items-start lg:basis-1/5 m-7 lg:justify-around lg:h-[634px]">
             <h2 className="font-bold text-5xl">
               We've Been Building For Over 10 Years
             </h2>
@@ -38,13 +41,13 @@ const Trust = () => {
           </div>
         </div>
         <div className="flex font-bold">
-          <div className="flex flex-col flex-grow items-end bg-orangeJ text-black p-5">
+          <div className="flex flex-col flex-grow items-end bg-orangeJ text-black p-5 lg:flex-grow-[2]">
             <div className="flex flex-col justify-center items-center">
               <h2 className="text-3xl">12</h2>
               <h5 className="text-sm">Years Established</h5>
             </div>
           </div>
-          <div className="flex flex-col flex-grow items-end p-5">
+          <div className="flex flex-col flex-grow items-end p-5 lg:items-center">
             <div className="flex flex-col justify-center items-center">
               <h2 className="text-3xl">250</h2>
               <h5 className="text-sm">Completed Projects</h5>

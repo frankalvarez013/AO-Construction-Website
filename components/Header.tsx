@@ -9,14 +9,22 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '600'],
 })
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
 
-  const handleClick = () => {
-    setIsOpen(!isOpen)
+const Header = () => {
+  const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false)
+  const [scrollBar, setScrollBar] = useState(false)
+  if (scrollBar) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
   }
-  const handleGlobalClick = () => {
-    setIsOpen(false)
+  const handleBurgerClick = () => {
+    setHamburgerMenuOpen(!hamburgerMenuOpen)
+    setScrollBar(!scrollBar)
+  }
+  const handleNavItemsClick = () => {
+    setHamburgerMenuOpen(false)
+    setScrollBar(false)
   }
   return (
     <header className={poppins.className}>
@@ -28,13 +36,15 @@ const Header = () => {
 
         <ul
           className={`fixed flex -top-full gap-0 flex-col bg-white w-full text-center lg:static lg:flex-row lg:w-auto lg:top-auto lg:items-center lg:space-x-4 lg:pr-10 lg:gap-x-2 text-sm ${
-            isOpen ? 'top-0 h-screen justify-evenly items-center' : ''
+            hamburgerMenuOpen
+              ? 'top-0 h-screen justify-evenly items-center'
+              : ''
           }`}
         >
           <li className=" flex-nowrap">
             <button
               onClick={() => {
-                handleGlobalClick()
+                handleNavItemsClick()
                 document
                   .getElementById('home')
                   ?.scrollIntoView({ behavior: 'smooth' })
@@ -47,7 +57,7 @@ const Header = () => {
           <li className=" whitespace-nowrap">
             <button
               onClick={() => {
-                handleGlobalClick()
+                handleNavItemsClick()
                 document
                   .getElementById('about')
                   ?.scrollIntoView({ behavior: 'smooth' })
@@ -60,7 +70,7 @@ const Header = () => {
           <li className=" flex-nowrap">
             <button
               onClick={() => {
-                handleGlobalClick()
+                handleNavItemsClick()
                 document
                   .getElementById('projects')
                   ?.scrollIntoView({ behavior: 'smooth' })
@@ -73,7 +83,7 @@ const Header = () => {
           <li className="flex-nowrap">
             <button
               onClick={() => {
-                handleGlobalClick()
+                handleNavItemsClick()
                 document
                   .getElementById('services')
                   ?.scrollIntoView({ behavior: 'smooth' })
@@ -86,7 +96,7 @@ const Header = () => {
           <li className="whitespace-nowrap">
             <button
               onClick={() => {
-                handleGlobalClick()
+                handleNavItemsClick()
                 document
                   .getElementById('contact')
                   ?.scrollIntoView({ behavior: 'smooth' })
@@ -98,22 +108,22 @@ const Header = () => {
           </li>
         </ul>
         <button
-          onClick={handleClick}
+          onClick={handleBurgerClick}
           className="flex flex-col justify-center items-center lg:hidden pr-7 flex-shrink-0 p-2"
         >
           <span
             className={`bg-black block transition-all duration-300 ease-out h-[2px] w-6 rounded-sm ${
-              isOpen ? 'rotate-45' : '-translate-y-1'
+              hamburgerMenuOpen ? 'rotate-45' : '-translate-y-1'
             }`}
           ></span>
           <span
             className={`bg-black block transition-all duration-300 ease-out h-[2px] w-6 rounded-sm ${
-              isOpen ? 'opacity-0' : 'opacity-100'
+              hamburgerMenuOpen ? 'opacity-0' : 'opacity-100'
             }`}
           ></span>
           <span
             className={`bg-black block transition-all duration-300 ease-out h-[2px] w-6 rounded-sm ${
-              isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'
+              hamburgerMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'
             }`}
           ></span>
         </button>
