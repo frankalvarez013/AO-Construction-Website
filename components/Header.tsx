@@ -5,14 +5,22 @@ import HamburgerSymbol from '../public/block.svg'
 import XSymbol from '../public/x.svg'
 import { Poppins } from 'next/font/google'
 import { useState } from 'react'
+import Link from 'next/link'
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '600'],
 })
 
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/team', label: 'Team' },
+  { href: '/projects', label: 'Projects' },
+]
+
 const Header = () => {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false)
   const [scrollBar, setScrollBar] = useState(false)
+
   if (scrollBar) {
     document.body.style.overflow = 'hidden'
   } else {
@@ -42,7 +50,8 @@ const Header = () => {
           }`}
         >
           <li className=" flex-nowrap">
-            <button
+            <Link
+              href={'/'}
               onClick={() => {
                 handleNavItemsClick()
                 document
@@ -52,36 +61,33 @@ const Header = () => {
               className="nav-link hover:underline decoration-2"
             >
               Home
-            </button>
+            </Link>
           </li>
           <li className=" whitespace-nowrap">
-            <button
+            <Link
+              href={'/team'}
               onClick={() => {
                 handleNavItemsClick()
-                document
-                  .getElementById('about')
-                  ?.scrollIntoView({ behavior: 'smooth' })
               }}
               className="nav-link hover:underline decoration-2"
             >
               About Us
-            </button>
+            </Link>
           </li>
           <li className=" flex-nowrap">
-            <button
+            <Link
+              href="/projects"
               onClick={() => {
                 handleNavItemsClick()
-                document
-                  .getElementById('projects')
-                  ?.scrollIntoView({ behavior: 'smooth' })
               }}
               className="nav-link hover:underline decoration-2"
             >
               Projects
-            </button>
+            </Link>
           </li>
           <li className="flex-nowrap">
-            <button
+            <Link
+              href={'/#services'}
               onClick={() => {
                 handleNavItemsClick()
                 document
@@ -91,10 +97,12 @@ const Header = () => {
               className="nav-link hover:underline decoration-2"
             >
               Services
-            </button>
+            </Link>
           </li>
           <li className="whitespace-nowrap">
-            <button
+            <Link
+              href={'/?a=contact'}
+              scroll={false}
               onClick={() => {
                 handleNavItemsClick()
                 document
@@ -104,7 +112,7 @@ const Header = () => {
               className="nav-link hover:underline decoration-2"
             >
               Contact
-            </button>
+            </Link>
           </li>
         </ul>
         <button

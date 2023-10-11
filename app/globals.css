@@ -38,3 +38,17 @@
 .slick-next:before {
   color: black !important;
 }
+
+@layer components {
+  .custom-mask {
+    -webkit-mask-image: url(../public/Vector3.svg);
+    mask-image: url(../public/Vector3.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain; /* Make the mask fit entirely */
+    mask-size: contain;
+    -webkit-mask-position: center; /* Center the mask */
+    mask-position: center;
+    overflow: visible;
+  }
+}

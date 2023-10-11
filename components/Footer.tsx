@@ -6,7 +6,7 @@ import Youtube from '../public/Youtube.png'
 
 const Footer = () => {
   return (
-    <footer className=" py-16 md:p-28 bg-dark-grey1 text-slate-100 p-5 lg:h-96">
+    <footer className=" py-10 md:p-28 bg-dark-grey1 text-slate-100 p-5 lg:h-80">
       <div className="flex flex-col md:flex-row justify-evenly gap-10 lg:gap-0">
         <div className="text-center md:text-left flex flex-col gap-4 basis-1/11 justify-center border-light-grey1 border-b-4 pb-5">
           <div className="font-semibold text-2xl">AO Construction</div>

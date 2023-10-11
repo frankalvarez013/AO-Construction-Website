@@ -1,5 +1,6 @@
 import ProfileCard from '@/components/profileCard'
 const teamPage = () => {
+  const myArray = []
   return (
     <div className="min-h-auto flex flex-col gap-8 mt-20 items-center text-center px-[52px] py-[48px]">
       <div className="">
@@ -11,14 +12,39 @@ const teamPage = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center px-20 gap-10">
-        <ProfileCard></ProfileCard>
-        <ProfileCard></ProfileCard>
-        <ProfileCard></ProfileCard>
-        <ProfileCard></ProfileCard>
-        <ProfileCard></ProfileCard>
-        <ProfileCard></ProfileCard>
-        <ProfileCard></ProfileCard>
-        <ProfileCard></ProfileCard>
+        {[
+          {
+            name: 'Miles Tales',
+            title: 'CEO',
+            description:
+              'There are many variations of passages of Lorem Ipsum available',
+            profilePic: 'stockFace1.png',
+          },
+          {
+            name: 'Jack Moore',
+            title: 'CFO',
+            description:
+              'There are many variations of passages of Lorem Ipsum available',
+            profilePic: 'stockFace2.png',
+          },
+          {
+            name: 'Shannon Morales',
+            title: 'Sales Manager',
+            description:
+              'There are many variations of passages of Lorem Ipsum available',
+            profilePic: 'stockFace3.png',
+          },
+        ].map((item, index) => (
+          <ProfileCard
+            key={index}
+            name={item.name}
+            title={item.title}
+            description={item.description}
+            links={item.name}
+            profilePic={item.profilePic}
+            number={index}
+          ></ProfileCard>
+        ))}
       </div>
     </div>
   )

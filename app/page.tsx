@@ -1,3 +1,4 @@
+'use client'
 import './globals.css'
 import Image from 'next/image'
 import displayImg from '../public/displayImg.png'
@@ -10,7 +11,22 @@ import RelatedProjects from '@/components/RelatedProjects'
 import FAQ from '@/components/FAQ'
 import LocationSection from '@/components/LocationSection'
 import ContactUs from '@/components/ContactUs'
+import { useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 export default function Home() {
+  const router = useSearchParams()
+  useEffect(() => {
+    console.log('hi')
+    const section = router.get('a')
+    console.log('soo', section)
+    if (section) {
+      const sectionElement = document.getElementById(section)
+      console.log('NO', sectionElement)
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }, [router.query])
   return (
     <div className="h-full w-full flex flex-col overflow-hidden">
       <main className="h-full w-full max-h-full pt-5 -mt-5">
