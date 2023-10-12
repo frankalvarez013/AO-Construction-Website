@@ -30,6 +30,7 @@ const config: Config = {
         'dark-grey1': '#2A2A2A',
         'light-grey2': '#F7F7F7',
         orangeJ: '#ffb400',
+        golden: '#daab6e',
       },
       spacing: {
         comp1: '46rem',

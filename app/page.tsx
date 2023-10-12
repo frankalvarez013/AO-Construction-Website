@@ -18,9 +18,11 @@ export default function Home() {
   useEffect(() => {
     console.log('hi')
     const section = router.get('a')
+
     console.log('soo', section)
     if (section) {
       const sectionElement = document.getElementById(section)
+      console.log(sectionElement)
       console.log('NO', sectionElement)
       if (sectionElement) {
         sectionElement.scrollIntoView({ behavior: 'smooth' })
@@ -32,6 +34,7 @@ export default function Home() {
       <main className="h-full w-full max-h-full pt-5 -mt-5">
         <section className="relative pt-20 lg:py-20 min-h-[700px]" id="home">
           <Image
+            loading="eager"
             src={displayImg}
             alt=""
             fill={true}
@@ -70,6 +73,7 @@ export default function Home() {
                       >
                         <div className="">
                           <Image
+                            loading="eager"
                             src={item.icon}
                             className="min-w-[50px]"
                             alt=""

@@ -52,3 +52,8 @@
     overflow: visible;
   }
 }
+
+.map-container {
+  width: 60%;
+  height: 50vh;
+}

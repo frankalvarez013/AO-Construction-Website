@@ -39,7 +39,13 @@ const Header = () => {
       <nav className="flex items-center justify-between pt-1.5 font-semibold fixed z-10 bg-white w-full">
         <div className="flex items-center pl-5 text-lg gap-3">
           <Image src={Brand} alt="/" className="h-14 w-14"></Image>
-          <span>AO Construction</span>
+          <Link href={'/'}>
+            <span>
+              {' '}
+              <span className=" text-golden">AO </span>
+              Construction
+            </span>
+          </Link>
         </div>
 
         <ul
@@ -87,9 +93,13 @@ const Header = () => {
           </li>
           <li className="flex-nowrap">
             <Link
-              href={'/#services'}
+              scroll={false}
+              href={'/?a=services'}
               onClick={() => {
-                handleNavItemsClick()
+                // handleNavItemsClick()
+                document
+                  .getElementById('services')
+                  ?.scrollIntoView({ behavior: 'smooth' })
                 document
                   .getElementById('services')
                   ?.scrollIntoView({ behavior: 'smooth' })
@@ -104,7 +114,7 @@ const Header = () => {
               href={'/?a=contact'}
               scroll={false}
               onClick={() => {
-                handleNavItemsClick()
+                // handleNavItemsClick()
                 document
                   .getElementById('contact')
                   ?.scrollIntoView({ behavior: 'smooth' })
