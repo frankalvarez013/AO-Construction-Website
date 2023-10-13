@@ -36,7 +36,7 @@ const Header = () => {
   }
   return (
     <header className={poppins.className}>
-      <nav className="flex items-center justify-between pt-1.5 font-semibold fixed z-10 bg-white w-full">
+      <nav className="flex items-center justify-between pt-1.5 font-semibold fixed  z-20 bg-white w-full">
         <div className="flex items-center pl-5 text-lg gap-3">
           <Image src={Brand} alt="/" className="h-14 w-14"></Image>
           <Link href={'/'}>
@@ -96,7 +96,7 @@ const Header = () => {
               scroll={false}
               href={'/?a=services'}
               onClick={() => {
-                // handleNavItemsClick()
+                handleNavItemsClick()
                 document
                   .getElementById('services')
                   ?.scrollIntoView({ behavior: 'smooth' })
@@ -114,7 +114,7 @@ const Header = () => {
               href={'/?a=contact'}
               scroll={false}
               onClick={() => {
-                // handleNavItemsClick()
+                handleNavItemsClick()
                 document
                   .getElementById('contact')
                   ?.scrollIntoView({ behavior: 'smooth' })

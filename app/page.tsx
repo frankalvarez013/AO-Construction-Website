@@ -28,7 +28,7 @@ export default function Home() {
         sectionElement.scrollIntoView({ behavior: 'smooth' })
       }
     }
-  }, [router.query])
+  }, [])
   return (
     <div className="h-full w-full flex flex-col overflow-hidden">
       <main className="h-full w-full max-h-full pt-5 -mt-5">

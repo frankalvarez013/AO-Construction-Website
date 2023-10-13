@@ -1,7 +1,6 @@
-import Card from './Card'
+import Card from './ProjectPrevCard'
 import { Component } from 'react'
 import SimpleSlider from './SimpleSlider'
-import Slider from 'react-slick'
 const relatedProjects = () => {
   return (
     <section id="projects" className="pt-12 -mt-12 py-20">
@@ -13,9 +12,12 @@ const relatedProjects = () => {
         <div className=" h-auto w-4/5">
           <SimpleSlider></SimpleSlider>
         </div>
-        <button className="border-black border-4 px-16 py-3 hover:text-orangeJ hover:border-orangeJ">
+        <a
+          href="/projects/"
+          className="border-black border-4 px-16 py-3 hover:text-orangeJ hover:border-orangeJ"
+        >
           VIEW ALL
-        </button>
+        </a>
       </div>
     </section>
   )
