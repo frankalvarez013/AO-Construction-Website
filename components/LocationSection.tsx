@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Map from '../public/map.png'
+import Map from '../public/Map.png'
 import Phone from '../public/phone.svg'
 import Email from '../public/email.svg'
 const LocationSection = () => {

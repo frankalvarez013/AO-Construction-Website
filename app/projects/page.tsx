@@ -36,7 +36,7 @@ const ProjectsPage = ({ params }) => {
   )
   if (!isLoaded) return <div>Loading...</div>
   return (
-    <div className="h-[100vh] min-h-auto mt-20 h-auto">
+    <div className="h-[100vh] min-h-auto mt-20">
       <div className=" text-5xl m-auto text-center mb-5" id="project-title">
         Projects!
       </div>
