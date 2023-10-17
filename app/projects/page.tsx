@@ -36,7 +36,7 @@ const ProjectsPage = ({ params }) => {
   )
   if (!isLoaded) return <div>Loading...</div>
   return (
-    <div className="h-[100vh] min-h-auto mt-20">
+    <div className="h-[100vh] min-h-auto mt-20 h-auto overflow-hidden">
       <div className=" text-5xl m-auto text-center mb-5" id="project-title">
         Projects!
       </div>
@@ -48,7 +48,7 @@ const ProjectsPage = ({ params }) => {
         the worked done on each location
       </div>
       <div
-        className="flex gap-10 justify-around items-center m-10 flex-grow-1 flex-shrink-0"
+        className="flex gap-3 gap-10 justify-around items-center m-10 flex-grow-1 flex-shrink-0 flex-col lg:flex-row"
         id="project-map"
       >
         <GoogleMap
@@ -75,7 +75,7 @@ const ProjectsPage = ({ params }) => {
         </GoogleMap>
         <div className="flex" id="project-card">
           <div
-            className={`h-[650px] w-full p-12 shadow-2xl rounded-2xl ${
+            className={`h-[650px] w-full p-5 lg:p-8 shadow-2xl rounded-2xl ${
               cardCheck ? 'hidden' : ' '
             }`}
           >
@@ -83,7 +83,7 @@ const ProjectsPage = ({ params }) => {
               onClick={() => {
                 setCardCheck(true)
               }}
-              className=" ml-auto -top-2 left-9 -right-1 z-10 relative w-10 flex flex-col justify- items-end pr-7 flex-shrink-0 p-2"
+              className=" ml-auto -top-2 left-9 -right-1 z-10 sticky w-10 flex flex-col justify- items-end flex-shrink-0 p-2"
             >
               <span className="bg-black block transition-all duration-300 ease-out h-[2px] w-6 rounded-sm rotate-45 "></span>
               <span
@@ -93,7 +93,7 @@ const ProjectsPage = ({ params }) => {
               ></span>
             </button>
 
-            <div className="border-b-2 pb-1 mb-4 items-center flex flex-col justify-center items-center">
+            <div className="border-b-2 pb-1 mb-4 items-center flex flex-col justify-center">
               <div className="text-2xl font-semibold mb-4">
                 Construction Type: {properties[Number(marker)].type}
               </div>
@@ -102,7 +102,7 @@ const ProjectsPage = ({ params }) => {
                 aftPic={properties[Number(marker)].pictures[1]}
               ></SimpleSlider>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 px-10">
               <div className="font-light">
                 Date:{' '}
                 <span className="font-normal">

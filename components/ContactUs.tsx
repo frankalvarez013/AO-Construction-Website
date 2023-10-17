@@ -52,14 +52,14 @@ const ContactUs = () => {
         <div className="">
           <form
             action=""
-            className="flex flex-wrap gap-10"
+            className="flex flex-wrap gap-5"
             onSubmit={handleSubmit}
           >
             <label htmlFor="name" className="flex grow " id="contact-name">
               <textarea
                 id="name"
                 name="name"
-                className="w-full h-20 p-3"
+                className="w-full h-12 lg:h-20 p-3"
                 placeholder="Name"
               />
             </label>
@@ -67,7 +67,7 @@ const ContactUs = () => {
               <textarea
                 id="email"
                 name="email"
-                className="w-full h-20 p-3"
+                className="w-full h-12 lg:h-20 p-3"
                 placeholder="Email"
               />
             </label>

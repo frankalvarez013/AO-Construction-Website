@@ -1,3 +1,4 @@
+import Link from 'next/link'
 const VideoSection = () => {
   return (
     <section id="about" className="pt-12 -mt-12 snap-start">
@@ -15,14 +16,17 @@ const VideoSection = () => {
               <source src={'/buildingVid.mp4'} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="flex text-black" id="video-subtitle">
-              <h3 className="bg-orangeJ flex-grow p-3 font-semibold lg:py-5">
+            <div
+              className="flex text-black flex-col md:flex-row"
+              id="video-subtitle"
+            >
+              <h3 className="bg-orangeJ flex-grow p-1 font-semibold lg:py-5">
                 <strong className=" font-bold text-3xl">
                   Call for a Quote
                 </strong>{' '}
                 <br /> (346) 234 - 6973
               </h3>
-              <div className="flex flex-grow justify-center items-center bg-white px-3">
+              <div className="flex flex-grow justify-center items-center bg-white py-3 md:py-0 px-3">
                 <button className="border-black border-4 px-3 py-1 font-semibold hover:text-orangeJ hover:border-orangeJ">
                   ONLINE ESTIMATE FORM
                 </button>
@@ -39,12 +43,13 @@ const VideoSection = () => {
               ut quam sed mauris proin feugiat. Scelerisque lorem posuere
               iaculis nunc amet phasellus.
             </p>
-            <button
+            <Link
               className="border-orangeJ border-2 px-12 py-2 text-orangeJ font-normal hover:bg-orangeJ hover:text-black"
+              href={'/team'}
               id="video-button"
             >
               About Us
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex font-bold" id="video-posttitle">

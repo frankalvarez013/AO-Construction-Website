@@ -1,10 +1,11 @@
 import constructionBuilding from '../public/constructionBuilding.svg'
 import documentationImg from '../public/documentationImg.svg'
 import Image from 'next/image'
-import {useEffect} from 'react'
+import Link from 'next/link'
+import { useEffect } from 'react'
 const SecondSection = () => {
   return (
-    <section className="h-auto flex justify-center lg:min-h-[830px] snap-start mb-20 -mt-20 pt-20" >
+    <section className="h-auto flex justify-center lg:min-h-[830px] snap-start mb-20 -mt-20 pt-20">
       <div className="flex flex-col justify-center items-center gap-20 w-3/4 lg:flex-row-reverse">
         <div className="flex">
           <div className="relative w-44 h-52 lg:w-[400px] lg:static lg:h-full">
@@ -25,7 +26,10 @@ const SecondSection = () => {
           </div>
         </div>
         <div className="flex flex-col items-start gap-8">
-          <div className="font-bold text-4xl sm:text-6.5xl lil:text-5xl" id="s2-title">
+          <div
+            className="font-bold text-4xl sm:text-6.5xl lil:text-5xl"
+            id="s2-title"
+          >
             With our knowledge <br />
             we guarentee success
           </div>
@@ -38,9 +42,9 @@ const SecondSection = () => {
             leo consectetur accumsan. Vivamus viverra ante turpis, dignissim
             condimentum elit egestas sit amet. Phasellus faucibus pellentesque
           </div>
-          <button className="px-10 py-2 bg-orangeJ text-white text-sm hover:text-black" id="s2-button">
+          {/* <Link className="px-10 py-2 bg-orangeJ text-white text-sm hover:text-black" href={'/?a=about'} id="s2-button">
             Learn More ->
-          </button>
+          </Link> */}
         </div>
       </div>
     </section>
@@ -48,4 +52,3 @@ const SecondSection = () => {
 }
 
 export default SecondSection
-

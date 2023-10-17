@@ -29,7 +29,7 @@ export default function Home() {
     observer.observe(document.getElementById('s2-title')!)
     observer.observe(document.getElementById('s2-subtitle')!)
     observer.observe(document.getElementById('s2-subtext')!)
-    observer.observe(document.getElementById('s2-button')!)
+    // observer.observe(document.getElementById('s2-button')!)
     observer.observe(document.getElementById('home')!)
     observer.observe(document.getElementById('related-title')!)
     observer.observe(document.getElementById('related-slider')!)
@@ -79,7 +79,7 @@ export default function Home() {
           ></Image>
           <div className="absolute inset-0 bg-light-grey1 opacity-80"></div>
 
-          <div className="flex justify-center items-center lg:py-[100px] p-20">
+          <div className="flex justify-center items-center lg:py-[100px] p-12 md:p-20">
             <div className="flex flex-col relative text-white gap-14 md:gap-24 mb-16 lg:flex-row">
               <div className="flex flex-col items-start gap-8">
                 <h1 className="font-bold border-orangeJ border-l-8 text-4xl sm:text-6.5xl pl-5 lil:text-5xl">

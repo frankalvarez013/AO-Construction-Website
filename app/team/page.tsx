@@ -18,7 +18,7 @@ const TeamPage = () => {
   }, [])
 
   return (
-    <div className="min-h-[700px] flex flex-col gap-8 pt-48 -mt-16 items-center text-center px-[52px] mb-24">
+    <div className="min-h-[700px] flex flex-col gap-8 pt-48 -mt-16 items-center text-center px-[52px] mb-24 overflow-hidden">
       <div className="">
         <div className="text-xl font-medium cap" id="team-title">
           WHO WE ARE
