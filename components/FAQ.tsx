@@ -4,13 +4,15 @@ import ReviewCard from './ReviewCard'
 
 const FAQ = () => {
   return (
-    <section id="services" className="pt-12 -mt-12">
+    <section id="services" className="pt-12 -mt-12 snap-start">
       <div className="flex h-full w-full bg-light-grey2 items-center justify-center p-12">
         <div className="flex flex-col gap-28 basis-5/6">
           <div className="flex flex-col md:flex-row gap-20">
             <div className="flex flex-col gap-10 md:basis-1/3 items-start">
-              <h2 className="font-semibold text-5xl">FAQ</h2>
-              <p className="font-normal text-light-grey1">
+              <h2 className="font-semibold text-5xl" id="faq-title">
+                FAQ
+              </h2>
+              <p className="font-normal text-light-grey1" id="faq-desc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
                 dignissim tristique tellus sed faucibus nullam. Tincidunt mauris
                 ut quam sed mauris proin feugiat.{' '}
@@ -22,21 +24,31 @@ const FAQ = () => {
                     .getElementById('contact')
                     ?.scrollIntoView({ behavior: 'smooth' })
                 }}
+                id="faq-button"
               >
                 Get in Touch
               </button>
             </div>
-            <div className="flex flex-col md:basis-2/3 gap-5 bg-white p-8">
+            <div
+              className="flex flex-col md:basis-2/3 gap-5 bg-white p-8"
+              id="faq-stack"
+            >
               <QuestionCard></QuestionCard>
               <QuestionCard></QuestionCard>
               <QuestionCard></QuestionCard>
             </div>
           </div>
           <div className="flex flex-col gap-20 justify-center items-center">
-            <h3 className="font-bold text-4xl flex-shrink-0 whitespace-nowrap">
+            <h3
+              className="font-bold text-4xl flex-shrink-0 whitespace-nowrap"
+              id="faq-client-title"
+            >
               Client Testimonials
             </h3>
-            <div className="flex gap-20 flex-wrap justify-center items-center">
+            <div
+              className="flex gap-20 flex-wrap justify-center items-center"
+              id="faq-client-cards"
+            >
               <ReviewCard></ReviewCard>
               <ReviewCard></ReviewCard>
               <ReviewCard></ReviewCard>

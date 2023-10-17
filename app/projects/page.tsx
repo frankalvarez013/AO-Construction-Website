@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useQueryState } from 'next-usequerystate'
 import SimpleSlider from '../../components/SimpleSlider2'
+import { useEffect } from 'react'
 const ProjectsPage = ({ params }) => {
   // const markerID = useState(params.id)
   // const router = useRouter()
@@ -16,7 +17,19 @@ const ProjectsPage = ({ params }) => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   })
-
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add('animate-fade-down')
+  //       }
+  //     })
+  //   })
+  //   observer.observe(document.getElementById('project-title')!)
+  //   observer.observe(document.getElementById('project-desc')!)
+  //   observer.observe(document.getElementById('project-map')!)
+  //   observer.observe(document.getElementById('project-card')!)
+  // }, [])
   const center = useMemo(
     () => ({ lat: 37.423928529779644, lng: -122.1087629822001 }),
     []
@@ -24,12 +37,20 @@ const ProjectsPage = ({ params }) => {
   if (!isLoaded) return <div>Loading...</div>
   return (
     <div className="h-[100vh] min-h-auto mt-20 h-auto">
-      <div className=" text-5xl m-auto text-center mb-5">Projects!</div>
-      <div className=" text-lg font-light m-auto text-center mb-5">
+      <div className=" text-5xl m-auto text-center mb-5" id="project-title">
+        Projects!
+      </div>
+      <div
+        className=" text-lg font-light m-auto text-center mb-5"
+        id="project-desc"
+      >
         View all the sites we've worked on since 2015! Click any marker to view
         the worked done on each location
       </div>
-      <div className="flex gap-10 justify-around items-center m-10 flex-grow-1 flex-shrink-0">
+      <div
+        className="flex gap-10 justify-around items-center m-10 flex-grow-1 flex-shrink-0"
+        id="project-map"
+      >
         <GoogleMap
           zoom={11}
           center={center}
@@ -52,7 +73,7 @@ const ProjectsPage = ({ params }) => {
             )
           })}
         </GoogleMap>
-        <div className="flex">
+        <div className="flex" id="project-card">
           <div
             className={`h-[650px] w-full p-12 shadow-2xl rounded-2xl ${
               cardCheck ? 'hidden' : ' '

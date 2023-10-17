@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={rubik.className}>
+    <html lang="en" className="">
+      <body className={`${rubik.className} `}>
         <div className="flex flex-col h-full w-full">
           <div className="">
             <Header></Header>

@@ -71,6 +71,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('tailwind-clip-path')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwind-clip-path'),
+    require('tailwindcss-animated'),
+  ],
 }
 export default config

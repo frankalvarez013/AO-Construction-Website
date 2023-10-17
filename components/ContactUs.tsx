@@ -41,16 +41,21 @@ const ContactUs = () => {
     }
   }
   return (
-    <section id="contact" className="h-full bg-orangeJ flex justify-center">
+    <section
+      id="contact"
+      className="h-full bg-orangeJ flex justify-center snap-start"
+    >
       <div className="flex flex-col p-20 gap-10 justify-center">
-        <div className="font-bold text-3xl">Contact Us</div>
+        <div className="font-bold text-3xl" id="contact-title">
+          Contact Us
+        </div>
         <div className="">
           <form
             action=""
             className="flex flex-wrap gap-10"
             onSubmit={handleSubmit}
           >
-            <label htmlFor="name" className="flex grow ">
+            <label htmlFor="name" className="flex grow " id="contact-name">
               <textarea
                 id="name"
                 name="name"
@@ -58,7 +63,7 @@ const ContactUs = () => {
                 placeholder="Name"
               />
             </label>
-            <label htmlFor="email" className="flex grow">
+            <label htmlFor="email" className="flex grow" id="contact-email">
               <textarea
                 id="email"
                 name="email"
@@ -66,7 +71,11 @@ const ContactUs = () => {
                 placeholder="Email"
               />
             </label>
-            <label htmlFor="message" className="flex basis-full">
+            <label
+              htmlFor="message"
+              className="flex basis-full"
+              id="contact-message"
+            >
               <textarea
                 id="message"
                 name="message"
@@ -74,7 +83,10 @@ const ContactUs = () => {
                 className="w-full p-3"
               />
             </label>
-            <div className={`basis-full ${submitt ? 'hidden' : ''}`}>
+            <div
+              className={`basis-full ${submitt ? 'hidden' : ''}`}
+              id="contact-submit"
+            >
               <input
                 type="submit"
                 value="Send Message"

@@ -1,17 +1,40 @@
+'use client'
 import ProfileCard from '@/components/profileCard'
-const teamPage = () => {
+import { useEffect } from 'react'
+const TeamPage = () => {
   const myArray = []
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-down')
+        }
+      })
+    })
+    observer.observe(document.getElementById('team-title')!)
+    observer.observe(document.getElementById('team-subtitle')!)
+    observer.observe(document.getElementById('team-desc')!)
+    observer.observe(document.getElementById('team-cards')!)
+  }, [])
+
   return (
-    <div className="min-h-[700px] flex flex-col gap-8 mt-24 items-center text-center px-[52px] mb-24">
+    <div className="min-h-[700px] flex flex-col gap-8 pt-48 -mt-16 items-center text-center px-[52px] mb-24">
       <div className="">
-        <div className="text-xl font-medium cap">WHO WE ARE</div>
-        <div className="font-semibold text-5xl">Meet our team</div>
-        <div className="text-gray-500 text-lg w-2/3 m-auto">
+        <div className="text-xl font-medium cap" id="team-title">
+          WHO WE ARE
+        </div>
+        <div className="font-semibold text-5xl" id="team-subtitle">
+          Meet our team
+        </div>
+        <div className="text-gray-500 text-lg w-2/3 m-auto" id="team-desc">
           Just take a look - each member of the team is watching your every
           gesture and will hear your every whisper.
         </div>
       </div>
-      <div className="flex flex-wrap justify-center px-20 gap-10">
+      <div
+        className="flex flex-wrap justify-center px-20 gap-10"
+        id="team-cards"
+      >
         {[
           {
             name: 'Miles Tales',
@@ -49,4 +72,4 @@ const teamPage = () => {
     </div>
   )
 }
-export default teamPage
+export default TeamPage

@@ -6,7 +6,7 @@ import building from '../public/building.svg'
 import repair from '../public/repair.svg'
 import design from '../public/design.svg'
 import HookSection from '@/components/HookSection'
-import Trust from '@/components/Trust'
+import Trust from '@/components/VideoSection'
 import RelatedProjects from '@/components/RelatedProjects'
 import FAQ from '@/components/FAQ'
 import LocationSection from '@/components/LocationSection'
@@ -16,23 +16,60 @@ import { useSearchParams } from 'next/navigation'
 export default function Home() {
   const router = useSearchParams()
   useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-down')
+        }
+      })
+    })
+    console.log(document.getElementById('bobo'))
+    observer.observe(document.getElementById('s2-Image1')!)
+    observer.observe(document.getElementById('s2-Image2')!)
+    observer.observe(document.getElementById('s2-title')!)
+    observer.observe(document.getElementById('s2-subtitle')!)
+    observer.observe(document.getElementById('s2-subtext')!)
+    observer.observe(document.getElementById('s2-button')!)
+    observer.observe(document.getElementById('home')!)
+    observer.observe(document.getElementById('related-title')!)
+    observer.observe(document.getElementById('related-slider')!)
+    observer.observe(document.getElementById('related-button')!)
+    observer.observe(document.getElementById('video')!)
+    observer.observe(document.getElementById('video-subtitle')!)
+    observer.observe(document.getElementById('video-title')!)
+    observer.observe(document.getElementById('video-desc')!)
+    observer.observe(document.getElementById('video-button')!)
+    observer.observe(document.getElementById('video-posttitle')!)
+    observer.observe(document.getElementById('faq-title')!)
+    observer.observe(document.getElementById('faq-desc')!)
+    observer.observe(document.getElementById('faq-stack')!)
+    observer.observe(document.getElementById('faq-client-title')!)
+    observer.observe(document.getElementById('faq-client-cards')!)
+    observer.observe(document.getElementById('location-image')!)
+    observer.observe(document.getElementById('location-info')!)
+    observer.observe(document.getElementById('location-email')!)
+    observer.observe(document.getElementById('location-phone')!)
+    observer.observe(document.getElementById('contact-title')!)
+    observer.observe(document.getElementById('contact-email')!)
+    observer.observe(document.getElementById('contact-name')!)
+    observer.observe(document.getElementById('contact-message')!)
+    observer.observe(document.getElementById('contact-submit')!)
+
     console.log('hi')
     const section = router.get('a')
-
-    console.log('soo', section)
     if (section) {
       const sectionElement = document.getElementById(section)
       console.log(sectionElement)
-      console.log('NO', sectionElement)
+      console.log('callin main section element', sectionElement)
       if (sectionElement) {
         sectionElement.scrollIntoView({ behavior: 'smooth' })
       }
     }
   }, [])
   return (
-    <div className="h-full w-full flex flex-col overflow-hidden">
-      <main className="h-full w-full max-h-full pt-5 -mt-5">
-        <section className="relative pt-20 lg:py-20 min-h-[700px]" id="home">
+    <div className="h-full w-full flex flex-col">
+      <main className="h-full w-full max-h-full pt-5 -mt-5 snap-start mb-16">
+        <section className="relative pt-20 lg:py-20 lg:min-h-[800px]" id="home">
           <Image
             loading="eager"
             src={displayImg}
