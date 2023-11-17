@@ -55,12 +55,9 @@ export default function Home() {
     observer.observe(document.getElementById('contact-message')!)
     observer.observe(document.getElementById('contact-submit')!)
 
-    console.log('hi')
     const section = router.get('a')
     if (section) {
       const sectionElement = document.getElementById(section)
-      console.log(sectionElement)
-      console.log('callin main section element', sectionElement)
       if (sectionElement) {
         sectionElement.scrollIntoView({ behavior: 'smooth' })
       }
@@ -89,8 +86,15 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                   quis egestas pellentesque libero dolor in diam consequat ut.{' '}
                 </p>
-                <button className="px-11 py-3 ml-1 bg-orangeJ text-sm font-semibold hover:text-black">
-                  Get a Free Quote
+                <button
+                  className="px-11 py-3 ml-1 bg-orangeJ text-sm font-semibold hover:text-black"
+                  onClick={() => {
+                    document
+                      .getElementById('2ndSec')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                >
+                  Find out More!
                 </button>
               </div>
               <div className="flex items-start flex-col gap-6">
@@ -100,9 +104,21 @@ export default function Home() {
                 <div className="flex flex-col gap-10">
                   <div className="flex flex-col gap-10">
                     {[
-                      { icon: building, text: 'Building Construction' },
-                      { icon: repair, text: 'Repair Services' },
-                      { icon: design, text: 'Design Solutions' },
+                      {
+                        icon: building,
+                        subTitle: 'Building Construction',
+                        text: 'Specializing in diverse construction projects, from residential homes to commercial structures, we deliver quality craftsmanship.',
+                      },
+                      {
+                        icon: repair,
+                        subTitle: 'Repair Services',
+                        text: 'Specializing in residential and commercial repairs: roofing, plumbing, electrical, and structural, ensuring quality and durability.',
+                      },
+                      {
+                        icon: design,
+                        subTitle: 'Design Solutions',
+                        text: 'Creating captivating designs for homes and businesses—modern, traditional, and bespoke solutions for every unique vision.',
+                      },
                     ].map((item, index) => (
                       <div
                         key={index}
@@ -117,11 +133,8 @@ export default function Home() {
                           />
                         </div>
                         <div className="px-9">
-                          <h1 className="font-bold">{item.text}</h1>
-                          <p className="font-light text-base">
-                            Lorem ipsum dolor sit consectetur adipiscing elit.
-                            Nullam lectus erat
-                          </p>
+                          <h1 className="font-bold">{item.subTitle}</h1>
+                          <p className="font-light text-base">{item.text}</p>
                         </div>
                       </div>
                     ))}

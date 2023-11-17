@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-const Question = () => {
+const Question = ({ Question, Answer }) => {
   const [isHidden, setIsHidden] = useState(true)
 
   const toggleVisibility = () => {
@@ -13,7 +13,7 @@ const Question = () => {
         className="flex justify-between hover:cursor-pointer hover:text-orangeJ"
         onClick={toggleVisibility}
       >
-        <h3 className="font-semibold text-xl">Question?</h3>
+        <h3 className="font-light text-lg">{Question}</h3>
         {isHidden ? (
           <button className="">+</button>
         ) : (
@@ -22,9 +22,9 @@ const Question = () => {
       </div>
       <div>
         {isHidden ? (
-          <p className="pb-20 font-normal text-light-grey1 hidden">Answer</p>
+          <p className="pb-20 font-light text-light-grey1 hidden">{Answer}</p>
         ) : (
-          <p className="pb-20 font-normal text-light-grey1">Answer</p>
+          <p className="pb-20 font-thin text-light-grey1">{Answer}</p>
         )}
       </div>
     </div>

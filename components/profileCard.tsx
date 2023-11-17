@@ -17,7 +17,7 @@ const profileCard = ({
   }.svg)] [mask-image:url(../public/Vector${number + 1}.svg)]`
   const size = number
   return (
-    <div className="h-[447px] w-[310px] pb-[0px] border-2 border-slate-200 hover:scale-105 ease-in-out duration-300">
+    <div className="h-[510px] w-[310px] pb-[0px] border-2 border-slate-200 hover:scale-105 ease-in-out duration-300">
       <div className="pt-4 h-1/2 flex justify-center items-center">
         <div
           className={stringNumber}

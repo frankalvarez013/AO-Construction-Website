@@ -14,7 +14,8 @@ const LocationSection = () => {
             <div className="w-4/5 p-5 shadow-2xl" id="location-info">
               <div className="font-light mb-3">Company Address</div>
               <div className="font-medium text-2xl w-2/3">
-                Themeforest, Envato HQ 24 Fifth st., Los Angeles, USA
+                1234 East Palm Street, South Cityville, CA 90001, Southeast Los
+                Angeles.
               </div>
             </div>
           </div>
@@ -27,8 +28,8 @@ const LocationSection = () => {
               <div className="flex flex-col gap-3">
                 <h4 className="font-normal text-sm">Emails</h4>
                 <div className="font-semibold text-base">
-                  <h3>Email</h3>
-                  <h3>Email</h3>
+                  <h3>support@aoconstruction.com</h3>
+                  <h3>hire@aoconstruction.com</h3>
                 </div>
               </div>
             </div>
@@ -40,8 +41,8 @@ const LocationSection = () => {
               <div className=" flex flex-col gap-3">
                 <h4 className="font-normal text-sm">Phones</h4>
                 <div className="font-semibold text-base">
-                  <h3>Phone</h3>
-                  <h3>Phone</h3>
+                  <h3>(323) 555-1234</h3>
+                  <h3>(310) 555-5678</h3>
                 </div>
               </div>
             </div>

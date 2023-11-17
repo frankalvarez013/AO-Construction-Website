@@ -27,8 +27,9 @@ const TeamPage = () => {
           Meet our team
         </div>
         <div className="text-gray-500 text-lg w-2/3 m-auto" id="team-desc">
-          Just take a look - each member of the team is watching your every
-          gesture and will hear your every whisper.
+          Welcome to our construction family! Meet our skilled team, ready to
+          transform your dreams into solid structures with passion and
+          precision.
         </div>
       </div>
       <div
@@ -40,21 +41,21 @@ const TeamPage = () => {
             name: 'Miles Tales',
             title: 'CEO',
             description:
-              'There are many variations of passages of Lorem Ipsum available',
+              'Leading with strategic vision for unparalleled construction excellence.',
             profilePic: 'stockFace1.png',
           },
           {
             name: 'Jack Moore',
             title: 'CFO',
             description:
-              'There are many variations of passages of Lorem Ipsum available',
+              'Overseeing financial strategies, ensuring fiscal health for project success.',
             profilePic: 'stockFace2.png',
           },
           {
             name: 'Shannon Morales',
             title: 'Sales Manager',
             description:
-              'There are many variations of passages of Lorem Ipsum available',
+              'Guiding project growth, building client relationships for seamless success.',
             profilePic: 'stockFace3.png',
           },
         ].map((item, index) => (

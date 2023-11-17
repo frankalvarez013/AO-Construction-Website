@@ -20,14 +20,21 @@ const VideoSection = () => {
               className="flex text-black flex-col md:flex-row"
               id="video-subtitle"
             >
-              <h3 className="bg-orangeJ flex-grow p-1 font-semibold lg:py-5">
-                <strong className=" font-bold text-3xl">
+              <h3 className="pl-7 bg-orangeJ flex-grow p-1 font-semibold lg:py-5">
+                <strong className="  font-bold text-3xl">
                   Call for a Quote
                 </strong>{' '}
                 <br /> (346) 234 - 6973
               </h3>
               <div className="flex flex-grow justify-center items-center bg-white py-3 md:py-0 px-3">
-                <button className="border-black border-4 px-3 py-1 font-semibold hover:text-orangeJ hover:border-orangeJ">
+                <button
+                  className="border-black border-4 px-3 py-1 font-semibold hover:text-orangeJ hover:border-orangeJ"
+                  onClick={() => {
+                    document
+                      .getElementById('services')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                >
                   ONLINE ESTIMATE FORM
                 </button>
               </div>
@@ -38,10 +45,11 @@ const VideoSection = () => {
               We've Been Building For Over 10 Years
             </h2>
             <p className="font-light" id="video-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
-              dignissim tristique tellus sed faucibus nullam. Tincidunt mauris
-              ut quam sed mauris proin feugiat. Scelerisque lorem posuere
-              iaculis nunc amet phasellus.
+              We've been constructing for over a decade. Building expertise with
+              a foundation of excellence, our projects stand as a testament to
+              precision and quality. From the inception of each endeavor to the
+              final touches, our commitment resonates through every facet of
+              construction, ensuring unparalleled results.
             </p>
             <Link
               className="border-orangeJ border-2 px-12 py-2 text-orangeJ font-normal hover:bg-orangeJ hover:text-black"

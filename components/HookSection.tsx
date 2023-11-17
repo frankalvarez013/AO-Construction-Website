@@ -6,7 +6,10 @@ import { useEffect } from 'react'
 const SecondSection = () => {
   return (
     <section className="h-auto flex justify-center lg:min-h-[830px] snap-start mb-20 -mt-20 pt-20">
-      <div className="flex flex-col justify-center items-center gap-20 w-3/4 lg:flex-row-reverse">
+      <div
+        id="2ndSec"
+        className="flex flex-col justify-center items-center gap-20 w-3/4 lg:flex-row-reverse"
+      >
         <div className="flex">
           <div className="relative w-44 h-52 lg:w-[400px] lg:static lg:h-full">
             <Image
@@ -34,13 +37,15 @@ const SecondSection = () => {
             we guarentee success
           </div>
           <div className="font-semibold text-base" id="s2-subtitle">
-            Fusce id hendrerit lectus. Morbi vitae tortor sed turpis feugiat
-            congue
+            Every construction project, meticulously handled, ensures precision
+            and quality.
           </div>
           <div className="font-normal text-sm" id="s2-subtext">
-            Cras tincidunt tellus at mi tristique rhoncus. Etiam dapibus rutrum
-            leo consectetur accumsan. Vivamus viverra ante turpis, dignissim
-            condimentum elit egestas sit amet. Phasellus faucibus pellentesque
+            Our unwavering commitment, meticulously showcased in every
+            construction detail, reflects a standard of excellence that
+            permeates throughout. As we continually craft superior spaces, our
+            unwavering dedication to achieving success remains steadfast,
+            driving us to exceed expectations in every facet of construction.
           </div>
           {/* <Link className="px-10 py-2 bg-orangeJ text-white text-sm hover:text-black" href={'/?a=about'} id="s2-button">
             Learn More ->
